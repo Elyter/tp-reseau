@@ -54,13 +54,36 @@ Il est possible de perde l'accés à intrenet si on utilise une IP déjà utilis
 
 ## 3. Modification d'adresse IP
 
-🌞 **Modifiez l'IP des deux machines pour qu'elles soient dans le même réseau**
+🌞 Modifiez l'IP des deux machines pour qu'elles soient
+```
+dans le même réseau
+Adresse IPv4. . . . . . . . . . . . . .: 10.10.10.225(en double)
+Masque de sous-réseau. . . . . . . . . : 255.255.255.0
+```
 
-🌞 **Vérifier à l'aide d'une commande que votre IP a bien été changée**
 
-🌞 **Vérifier que les deux machines se joignent**
+🌞 Vérifier à l'aide d'une commande que votre IP a bien été changé`
+```
+ipconfig /all
+```
 
-🌞 **Déterminer l'adresse MAC de votre correspondant**
+🌞 Vérifier que les deux machines se joignent
+ping 10.10.10.213
+```
+Envoi d’une requête 'Ping'  10.10.10.213 avec 32 octets de données :
+Réponse de 10.10.10.213 : octets=32 temps=1 ms TTL=128
+Réponse de 10.10.10.213 : octets=32 temps=1 ms TTL=128
+Réponse de 10.10.10.213 : octets=32 temps=3 ms TTL=128
+Réponse de 10.10.10.213 : octets=32 temps=1 ms TTL=128
+```
+
+🌞 Déterminer l'adresse MAC de votre correspondant
+ arp -a
+```
+Interface : 10.33.19.192 --- 0xb
+  Adresse Internet      Adresse physique      Type
+  10.33.17.98           24-ee-9a-5a-77-60     dynamique
+  ```
 
 ## 4. Utilisation d'un des deux comme gateway
 
