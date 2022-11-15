@@ -73,15 +73,33 @@ Discord:
 Active Internet connections (including servers)
 Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
 udp4       0      0  10.33.17.16.51549      162.159.134.233.443 
-
+```
+[Discord](Discord.pcapng)
+```
 Deezer:
 ❯ netstat -n -p TCP -a
 Active Internet connections (including servers)
 Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
 tcp4       0      0  10.33.17.16.54419      192.229.221.12.443     ESTABLISHED  
-
-
 ```
+[Deezer](Deezer.pcapng)
+```
+Youtube:
+❯ sudo lsof -i -n
+firefox   15899         eliott  149u  IPv4 0x6a4ab95f9b5ebb33      0t0    UDP *:56188
+```
+[Youtube](Youtube.pcapng)
+```
+Mail:
+❯ sudo lsof -i -n
+Mail      16149         eliott   29u  IPv4 0x6a4ab95ad5dc250b      0t0    TCP 10.33.17.16:54776->142.250.110.108:imaps (ESTABLISHED)
+```
+[Mail](Mail.pcapng)
+```
+Like Tinder:
+firefox   16181         eliott   49u  IPv4 0x6a4ab95ad428063b      0t0    TCP 10.33.17.16:54821->13.249.9.40:https (ESTABLISHED)
+```
+[Tinder](tinder.pcapng)
 **Il faudra ajouter des options adaptées aux commandes pour y voir clair. Pour rappel, vous cherchez des connexions TCP ou UDP.**
 
 ```
